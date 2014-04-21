@@ -19,7 +19,7 @@ namespace UnitTestProject1
         {
 
             List<int> saveCopy = new List<int>(scores);
-            return saveCopy.Select((pins, index) => pins += Bonus(index))
+            return saveCopy.Select((pins, roll) => pins += Bonus(roll))
                 .Aggregate((score, pins) => score += pins);
         }
 
